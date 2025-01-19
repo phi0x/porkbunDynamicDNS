@@ -22,6 +22,9 @@ This script automatically updates DNS records on Porkbun when your public IP add
 2. Make the script executable:
 ```chmod +x update_porkbun_dns.sh```
 3. Edit the script and replace `YOUR_API_KEY` and `YOUR_SECRET_KEY` with your Porkbun API credentials.
+4. Setup crontab AFTER you test the script. Example crontab which checks every 5 minutes.
+
+   ```*/5 * * * * /root/update_porkbun_dns.sh >> /var/log/porkbun_dns_update.log 2>&1```
 
 ## Usage
 
